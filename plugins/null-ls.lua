@@ -46,8 +46,3 @@ null_ls.setup {
   on_attach = on_attach,
   sources = sources,
 }
-require("mason-null-ls").setup {
-  ensure_installed = nil,
-  automatic_installation = true,
-  automatic_setup = false,
-}
