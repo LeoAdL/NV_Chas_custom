@@ -4,6 +4,18 @@ if not present then
   return
 end
 
+local sources = {
+  null_ls.builtins.formatting.black,
+  null_ls.builtins.formatting.latexindent,
+  null_ls.builtins.diagnostics.chktex,
+  null_ls.builtins.formatting.prettier,
+  null_ls.builtins.formatting.isort,
+  null_ls.builtins.diagnostics.pylint,
+  null_ls.builtins.completion.luasnip,
+  null_ls.builtins.diagnostics.luacheck,
+  null_ls.builtins.formatting.stylua,
+  null_ls.builtins.code_actions.gitsigns,
+}
 local lsp_formatting = function(bufnr)
   vim.lsp.buf.format {
     filter = function(client)
@@ -30,19 +42,6 @@ local on_attach = function(client, bufnr)
     })
   end
 end
-local sources = {
-  null_ls.builtins.formatting.black,
-  null_ls.builtins.formatting.latexindent,
-  null_ls.builtins.diagnostics.chktex,
-  null_ls.builtins.diagnostics.flake8,
-  null_ls.builtins.formatting.prettier,
-  null_ls.builtins.formatting.isort,
-  null_ls.builtins.diagnostics.pylint,
-  null_ls.builtins.completion.luasnip,
-  null_ls.builtins.diagnostics.luacheck,
-  null_ls.builtins.formatting.stylua,
-  null_ls.builtins.code_actions.gitsigns,
-}
 null_ls.setup {
   on_attach = on_attach,
   sources = sources,
