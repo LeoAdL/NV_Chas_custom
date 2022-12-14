@@ -60,6 +60,7 @@ return {
       }
     end,
   },
+  ["hkupty/iron.nvim"] = { require "custom.plugins.iron" },
 }
 
 -- load it after nvim-lspconfig cuz we lazy loaded lspconfig}
