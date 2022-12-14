@@ -12,7 +12,5 @@ vim.opt.cursorlineopt = "number"
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.g.luasnippets_path = "/Users/leoap/.config/nvim/lua/custom/snippets"
-require("nvim-tree").setup {}
-
-vim.g.vimtex_compiler_progname = "nvr"
 vim.g.tex_flavor = "latex"
+require("nvim-tree").setup {}
